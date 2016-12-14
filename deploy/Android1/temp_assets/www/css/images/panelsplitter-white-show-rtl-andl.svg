@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px"
+	 height="70px" viewBox="0 0 36 70" enable-background="new 0 0 36 70" xml:space="preserve">
+<g id="Tab_and_Shadow">
+	<g id="Shadow">
+		<g opacity="0.3">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M35.93,4.21h1.98c-0.98-0.15-1.97-0.24-2.98-0.24C21.16,3.97,10,18.28,10,35.94
+				c0,17.66,11.16,31.97,24.92,31.97c0.34,0,0.67-0.02,1-0.03V4.21z"/>
+		</g>
+	</g>
+	<g id="Tab">
+		<g>
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M35.92,4.21h2.99c-0.98-0.15-1.97-0.24-2.98-0.24
+				C22.16,3.97,11,18.28,11,35.94c0,17.65,11.16,31.97,24.92,31.97V4.21z"/>
+		</g>
+	</g>
+</g>
+<g id="Arrow_Show">
+	<path fill="#828282" d="M26.81,53.67c0.59,0.04,3.09-0.51,3.09-0.51c0.56,0,1.02-0.46,1.02-1.02v-1.01l-4.58-13.22v-1.57
+		l4.58-13.18v-1.01c0-0.56-0.46-1.02-1.02-1.02c0,0-2.54-0.47-3.05-0.51c-0.51-0.04-0.69,0.51-0.69,0.51l-5.41,15.24v1.53
+		l5.36,15.21C26.11,53.13,26.22,53.62,26.81,53.67z"/>
+</g>
+</svg>

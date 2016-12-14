@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.22.33" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/Beacon/Beacon.amx" usageId="mobile_BeaconPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_BeaconPageDef" path="Beacon.BeaconPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="BeaconManager" path="mobile.BeaconManager"/>
+  </dataControlUsages>
+</Application>

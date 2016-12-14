@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="Beacon" name="Beacon">
+    <adfmf:content id="Beacon.1">
+      <adfmf:amx file="Beacon/Beacon.amx">
+        <adfmf:includes>
+          <adfmf:include type="JavaScript" file="resources/js/beacon.js" id="i1"/>
+        </adfmf:includes>
+      </adfmf:amx>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

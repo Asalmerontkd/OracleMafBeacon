@@ -1,0 +1,77 @@
+[
+  {
+    "js": [
+      "js/toolkit/DvtToolkit.js"
+     ]
+  },
+  {
+    "match" : ["^(?!(picto))", "Chart$|timeline"],
+    "js": [
+      "js/toolkit/DvtOverview.js"
+    ]
+  },
+  {
+    "match" : ["^(?!(picto))", "Chart$|Gauge$"],
+    "js": [
+      "js/toolkit/DvtAxis.js"
+    ]
+  },
+  {
+    "match": ["^(?!(spark))", "Chart$|nBox|legend|thematicMap|sunburst|treemap"],
+    "js": [
+      "js/toolkit/DvtLegend.js"
+    ]
+  },
+  {
+    "match" : ["^(?!(picto))", "Chart$"],
+    "js": [
+      "js/toolkit/DvtChart.js"
+    ]
+  },
+  {
+    "match": "Gauge$",
+    "js": [
+      "js/toolkit/DvtGauge.js"
+    ]
+  },
+  {
+    "match": "pictoChart|nBox|thematicMap|sunburst|treemap",
+    "js": [
+      "js/toolkit/DvtSubcomponent.js"
+    ]
+  },
+  {
+    "match": "pictoChart",
+    "js": [
+      "js/toolkit/DvtPictoChart.js"
+    ]
+  },
+  {
+    "match": "nBox",
+    "js": [
+      "js/toolkit/DvtNBox.js"
+    ]
+  },
+  {
+    "match": "thematicMap",
+    "js": [
+      "js/toolkit/DvtPanZoomCanvas.js",
+      "js/toolkit/DvtThematicMap.js"
+    ]
+  },
+  {
+    "match": "timeline",
+    "js": [
+      "js/toolkit/DvtTimeAxis.js",
+      "js/toolkit/DvtTimeComponent.js",
+      "js/toolkit/DvtTimelineOverview.js",
+      "js/toolkit/DvtTimeline.js"
+    ]
+  },
+  {
+    "match": "sunburst|treemap",
+    "js": [
+      "js/toolkit/DvtTreeView.js"
+    ]
+  }
+]
