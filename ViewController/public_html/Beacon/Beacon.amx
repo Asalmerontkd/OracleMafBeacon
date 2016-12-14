@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Beacon Client" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton actionListener="#{bindings.startMonitoring.execute}" text="startMonitoring"
+                         disabled="#{!bindings.startMonitoring.enabled}" id="cb1"
+                         rendered="#{applicationScope.monitoring != true}"/>
+      <amx:commandButton actionListener="#{bindings.stopMonitoring.execute}" text="stopMonitoring"
+                         disabled="#{!bindings.stopMonitoring.enabled}" id="cb2"
+                         rendered="#{applicationScope.monitoring == true}"/>
+    </amx:facet>
+    <amx:outputText value="Not monitoring a region." id="ot2" rendered="#{applicationScope.monitoring != true}"/>
+    <amx:outputText value="Monitoring region: #{applicationScope.region}" id="ot3"
+                    rendered="#{applicationScope.monitoring == true &amp;&amp; applicationScope.ranging != true}"/>
+    <amx:outputText value="Ranging region: #{applicationScope.region}" id="ot4" rendered="#{applicationScope.ranging == true}"/>
+    <amx:outputText value="Beacons located" id="ot5" rendered="#{applicationScope.ranging == true}"/>
+    <amx:listView var="row" value="#{bindings.beacons.collectionModel}" fetchSize="#{bindings.beacons.rangeSize}"
+                  selectedRowKeys="#{bindings.beacons.collectionModel.selectedRow}"
+                  initialScrollRowKeys="#{bindings.beacons.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.beacons.collectionModel.makeCurrent}"
+                  styleClass="adfmf-listView-insetList" showMoreStrategy="autoScroll" bufferStrategy="viewport"
+                  id="lv1" rendered="#{applicationScope.ranging == true}">
+      <amx:listItem id="li1">
+        <amx:tableLayout width="100%" id="tl1">
+          <amx:rowLayout id="rl1">
+            <amx:cellFormat width="10px" rowSpan="2" id="cf1"/>
+            <amx:cellFormat width="100%" height="#{deviceScope.device.os=='Android'?'36':'32'}px" id="cf2">
+              <amx:outputText value="#{row.uuid}" id="ot6"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+          <amx:rowLayout id="rl2">
+            <amx:cellFormat width="100%" height="#{deviceScope.device.os=='Android'?'22':'19'}px" id="cf3">
+              <amx:outputText value="#{row.proximity}" styleClass="adfmf-listItem-captionText" id="ot7"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+        </amx:tableLayout>
+      </amx:listItem>
+    </amx:listView>
+  </amx:panelPage>
+</amx:view>

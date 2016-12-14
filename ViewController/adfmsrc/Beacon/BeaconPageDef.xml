@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.33" id="BeaconPageDef" Package="Beacon">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="BeaconManager" id="BeaconManagerIterator"/>
+    <accessorIterator MasterBinding="BeaconManagerIterator" Binds="beacons" RangeSize="25" DataControl="BeaconManager"
+                      BeanClass="mobile.Beacon" id="beaconsIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="startMonitoring" RequiresUpdateModel="true" Action="invokeMethod" MethodName="startMonitoring"
+                  IsViewObjectMethod="false" DataControl="BeaconManager" InstanceName="data.BeaconManager.dataProvider">
+      <NamedData NDName="actionEvent" NDType="oracle.adfmf.amx.event.ActionEvent"/>
+    </methodAction>
+    <methodAction id="stopMonitoring" RequiresUpdateModel="true" Action="invokeMethod" MethodName="stopMonitoring"
+                  IsViewObjectMethod="false" DataControl="BeaconManager" InstanceName="data.BeaconManager.dataProvider">
+      <NamedData NDName="actionEvent" NDType="oracle.adfmf.amx.event.ActionEvent"/>
+    </methodAction>
+    <tree IterBinding="beaconsIterator" id="beacons">
+      <nodeDefinition DefName="mobile.Beacon" Name="beacons0">
+        <AttrNames>
+          <Item Value="uuid"/>
+          <Item Value="proximity"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,6 +1,8 @@
 package application;
 
 import oracle.adfmf.application.LifeCycleListener;
+import oracle.adfmf.framework.event.EventSource;
+import oracle.adfmf.framework.event.EventSourceFactory;
 
 /**
  * The application life cycle listener provides the basic structure for developers needing
@@ -60,7 +62,9 @@ public class LifeCycleListenerImpl implements LifeCycleListener
    */
   public void start()
   {
-    // Add code here...
+    EventSource evtSource = EventSourceFactory.getEventSource(
+    EventSourceFactory.NATIVE_LOCAL_NOTIFICATION_EVENT_SOURCE_NAME);
+    evtSource.addListener(new NativeLocalNotificationListener());
   }
 
   /**
